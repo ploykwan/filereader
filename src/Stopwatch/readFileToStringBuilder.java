@@ -5,7 +5,17 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 
+/**
+ * Read text file, then collect text into StringBuilder.
+ * @author kwankaew
+ *
+ */
 public class readFileToStringBuilder implements Runnable {
+	
+	/**
+	 * Read text file and collect into StringBuilder variable.
+	 * @return String from text.
+	 */
 	@Override
 	public String run() {
 		StringBuilder data = new StringBuilder();
@@ -29,6 +39,10 @@ public class readFileToStringBuilder implements Runnable {
 		return data.toString();
 	}
 
+	/**
+	 * Explain what this class do
+	 * @return the name of text and what program did.
+	 */
 	public String toString() {
 		return "Reading Alice-in-Wonderland.txt using FileReader, append to StringBuilder.";
 	}
