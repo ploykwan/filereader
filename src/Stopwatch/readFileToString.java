@@ -5,8 +5,17 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 
+/**
+ * Read text file, then collect text into String.
+ * @author kwankaew
+ *
+ */
 public class readFileToString implements Runnable{
 
+	/**
+	 * Read text file and collect into String variable.
+	 * @return String from text.
+	 */
 	@Override
 	public String run() {
 		String data = "";
@@ -30,6 +39,11 @@ public class readFileToString implements Runnable{
 		return data;
 		
 	}
+	
+	/**
+	 * Explain what this class do
+	 * @return the name of text and what program did.
+	 */
 	public String toString() {
 		return "Reading Alice-in-Wonderland.txt using FileReader, append to String.";
 	}

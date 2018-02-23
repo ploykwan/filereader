@@ -9,7 +9,17 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.nio.Buffer;
 
+/**
+ * Read text file by bufferedReader, then collect text into String.
+ * @author kwankaew
+ *
+ */
 public class readFileByBufferReader implements Runnable {
+	
+	/**
+	 * Read text file as a line collect into String variable.
+	 * @return String from text.
+	 */
 	@Override
 	public String run() {
 		FileReader reader = null;
@@ -36,18 +46,13 @@ public class readFileByBufferReader implements Runnable {
 			}
 		return result;
 	}
-
+	
+	/**
+	 * Explain what this class do
+	 * @return the name of text and what program did.
+	 */
 	public String toString() {
 		return "Reading Alice-in-Wonderland.txt using BufferReader, append line to String.";
 	}
-	// public static void main(String[] arg) {
-	// Stopwatch stopwatch = new Stopwatch();
-	//
-	// stopwatch.start();
-	// String alice = readFileToString("./Alice-in-Wonderland.txt");
-	// stopwatch.stop();
-	//
-	// System.out.printf("Read %d chars in %.02f sec.", alice.length(),
-	// stopwatch.getElapsed());
-	// }
+	
 }
